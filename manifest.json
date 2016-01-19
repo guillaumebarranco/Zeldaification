@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "Zeldaification",
+	"description": "Nice",
+	"version": "1.0",
+	"permissions": [
+		"http://*/*",
+		"https://*/*"
+	],
+	"browser_action": [
+		"default_icon" : "img/favicon-160x160.png",
+		"default_popup" : "popup.html" 
+	],
+	"icons": {
+		"160": "img/favicon-160x160.png"
+	}
+}
