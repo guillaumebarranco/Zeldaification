@@ -6,9 +6,11 @@
 	    "default_popup": "popup.html",
 	    "default_icon": "img/favicon-160x160.png"
 	},
-	"icons": {
-	    "160": "favicon-160x160.png"
-	},
+	"icons": { 
+		"16": "img/icons/favicon-16x16.png",
+        "48": "img/icons/favicon-48x48.png",
+       	"128": "img/icons/favicon-128x128.png" 
+    },
 	"permissions": [
 	    "tabs",
 	    "storage",
