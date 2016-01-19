@@ -118,11 +118,26 @@ Object.size = function (obj) {
 var tab_rand = [];
 
 
-var koko = document.querySelectorAll("img");
 
-for (var i = 0; i < koko.length; i++) {
-	var random = rand(0, Object.size(array));
-    koko[i].src = array[random];
+
+var koko = document.querySelectorAll("img");
+var previous_img_length = koko.length;
+
+changeImages();
+
+setInterval(function() {
+	koko = document.querySelectorAll("img");
+	if(koko.length > previous_img_length) {
+		changeImages();
+		previous_img_length = koko.length;
+	}
+}, 1000);
+
+function changeImages() {
+	for (var i = 0; i < koko.length; i++) {
+		var random = rand(0, Object.size(array));
+	    koko[i].src = array[random];
+	}
 }
 
 function rand(min, max) {
