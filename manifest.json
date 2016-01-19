@@ -1,17 +1,19 @@
 {
-	"manifest_version": 2,
 	"name": "Zeldaification",
-	"description": "Nice",
 	"version": "1.0",
-	"permissions": [
-		"http://*/*",
-		"https://*/*"
-	],
-	"browser_action": [
-		"default_icon" : "img/favicon-160x160.png",
-		"default_popup" : "popup.html" 
-	],
+	"description": "My chrome extension",
+	"browser_action": {
+	    "default_popup": "popup.html",
+	    "default_icon": "img/favicon-160x160.png"
+	},
 	"icons": {
-		"160": "img/favicon-160x160.png"
-	}
+	    "160": "favicon-160x160"
+	},
+	"permissions": [
+	    "tabs",
+	    "storage",
+	    "http://*/",
+	    "https://*/"
+	],
+	"manifest_version": 2
 }
