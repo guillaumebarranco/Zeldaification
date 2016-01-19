@@ -1,0 +1,2 @@
+# Zeldaification
+extension chrome
