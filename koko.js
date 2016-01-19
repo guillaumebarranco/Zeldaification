@@ -111,9 +111,8 @@ var array = {
 
 Object.size = function (obj) {
     var size = 0;
-    for (var key in obj) {
-        if (obj.hasOwnProperty(key)) size++;
-    }return size;
+    for (var key in obj) if (obj.hasOwnProperty(key)) size++;
+    return size;
 };
 
 var tab_rand = [];
@@ -129,4 +128,3 @@ for (var i = 0; i < koko.length; i++) {
 function rand(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
