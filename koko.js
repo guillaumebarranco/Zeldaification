@@ -109,15 +109,24 @@ var array = {
 	107: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS05CIaTU4n6VJZvDiyn9CH5ifrGPilTzjPaTFFomiXrCUOI7Fe"
 };
 
+Object.size = function (obj) {
+    var size = 0;
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }return size;
+};
+
 var tab_rand = [];
+
 
 var koko = document.querySelectorAll("img");
 
 for (var i = 0; i < koko.length; i++) {
-	var random = rand(0, array.length);
+	var random = rand(0, Object.size(array));
     koko[i].src = array[random];
 }
 
 function rand(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
